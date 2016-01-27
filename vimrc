@@ -4,32 +4,25 @@ runtime macros/matchit.vim
 set ttyfast
 set lazyredraw
 
-let g:ruby_path="~/.rvm/bin/ruby"
-
 " have jsx highlighting/indenting work in .js files as well
 let g:jsx_ext_required = 0
-
-let $PATH='/usr/local/bin:' . $PATH
-
-:au FocusLost * :wa "Save on focus lost
 
 " Sessions
 let g:session_autoload = 'no'
 
 " Leader Mappings
-map <Space> <leader>
+let mapleader = ','
 map <Leader>w :update<CR>
 map <Leader>q :qall<CR>
 map <Leader>gs :Gstatus<CR>
 map <Leader>gc :Gcommit<CR>
 map <Leader>gp :Gpush<CR>
-"
-" RSpec.vim mappings
+
+" vim-rspec mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>a :call RunAllSpecs()<CR>
-
 
 " Toggle nerdtree with F10
 map <F10> :NERDTreeToggle<CR>
@@ -121,7 +114,7 @@ set tabstop=2
 set shiftwidth=2
 set expandtab
 
-let g:rspec_command = 'call Send_to_Tmux("bin/rspec {spec}\n")'
+let g:rspec_command = 'call Send_to_Tmux("bundle exec spring rspec {spec}\n")'
 let g:mocha_js_command = 'call Send_to_Tmux("mocha --opts spec/javascripts/mocha.opts {spec}\n")'
 let g:rspec_runner = "os_x_iterm"
 
@@ -156,7 +149,7 @@ set t_Co=256
 
 " Color scheme
 colorscheme solarized
-set background=dark
+set background=light
 set encoding=utf-8
 
 " Highlight line number of where cursor currently is
@@ -174,15 +167,6 @@ set undodir=~/.vim/undo/
 set undofile
 set undolevels=1000
 set undoreload=10000
-
-:nnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
-:nnoremap <expr> yy (v:register ==# '"' ? '"+' : '') . 'yy'
-:nnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
-:xnoremap <expr> y (v:register ==# '"' ? '"+' : '') . 'y'
-:xnoremap <expr> Y (v:register ==# '"' ? '"+' : '') . 'Y'
-
-" convert hash rockets
-nmap <leader>rh :%s/\v:(\w+) \=\>/\1:/g<cr>
 
 " Tab completion
 " will insert tab at beginning of line,
@@ -228,11 +212,6 @@ nnoremap <C-l> <C-w>l
 let g:syntastic_ruby_checkers = ['mri']
 let g:syntastic_enable_highlighting=0
 
-" Local config
-if filereadable($HOME . "/.vimrc.local")
-  source ~/.vimrc.local
-endif
-
 " Remove trailing whitespace on save for ruby files.
 function! s:RemoveTrailingWhitespaces()
   "Save last cursor position
@@ -256,6 +235,7 @@ nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" Make it obvious where 80 characters is
-set textwidth=80
-set colorcolumn=+1
+" Local config
+if filereadable($HOME . "/.vimrc.local")
+  source ~/.vimrc.local
+endif
