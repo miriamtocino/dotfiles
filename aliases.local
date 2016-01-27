@@ -1,10 +1,14 @@
 alias dotfiles="cd ~/dotfiles"
-alias reloadzsh="source ~/.zshrc"
+alias sourcezsh="source ~/.zshrc"
+alias sourcetmux="tmux source-file ~/.tmux.conf"
 
 # Projects
 alias p="cd ~/projects"
 alias yoga="cd ~/projects/ror/yoga_on_rails"
 alias one="cd ~/projects/springest/one"
+
+# Rails
+alias rendered="tail -f log/development.log | grep Rendered"
 
 # Springest — ONE
 alias worker="bundle exec sidekiq -C config/sidekiq.yml -c ${WORKERS:-1}"

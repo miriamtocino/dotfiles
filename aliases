@@ -37,7 +37,7 @@ alias gi="gem install"
 
 # Rails
 alias rk="rake"
-alias rc="bin/rails c"
+alias rc="bundle exec rails c"
 
 # Config Files
 alias vimrc="vim ~/.vimrc"
