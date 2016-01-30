@@ -56,6 +56,9 @@ plugins=(git)
 export PATH=".git/safe/../../bin:/Users/miriamtocino/.rbenv/shims:.git/safe/../../bin:/Users/miriamtocino/.rbenv/shims:/usr/local/bin:/usr/local/sbin:/usr/bin:/bin:/usr/sbin:/sbin"
 # export MANPATH="/usr/local/man:$MANPATH"
 
+# Add '~/dotfiles/bin' to the '$PATH'
+export PATH="$HOME/dotfiles/bin:$PATH";
+
 source $ZSH/oh-my-zsh.sh
 
 # You may need to manually set your language environment
