@@ -10,7 +10,7 @@ let g:jsx_ext_required = 0
 " Sessions
 let g:session_autoload = 'no'
 
-" Leader Mappings
+" leader Mappings
 let mapleader = ','
 map <Leader>w :update<CR>
 map <Leader>q :qall<CR>
@@ -234,6 +234,20 @@ nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
+
+" More natural split opening
+set splitbelow
+set splitright
+
+" automatically rebalance windows on vim resize
+autocmd VimResized * :wincmd =
+
+" zoom a vim pane, <C-w>= to re-balance
+nnoremap <leader>- :wincmd _<cr>:wincmd \|<cr>
+nnoremap <leader>= :wincmd =<cr>
+
+" go to the beginning of the line
+nmap 0 ^
 
 " Local config
 if filereadable($HOME . "/.vimrc.local")

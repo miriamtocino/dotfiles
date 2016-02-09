@@ -1,6 +1,5 @@
 alias dotfiles="cd ~/dotfiles"
 alias sourcezsh="source ~/.zshrc"
-alias sourcetmux="tmux source-file ~/.tmux.conf"
 
 # Projects
 alias p="cd ~/projects"

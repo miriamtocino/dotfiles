@@ -47,5 +47,6 @@ Bundle 'jelera/vim-javascript-syntax'
 Bundle 'jsx/jsx.vim'
 Bundle 'terryma/vim-expand-region'
 Bundle 'slim-template/vim-slim'
+Bundle 'christoomey/vim-tmux-runner'
 
 filetype on
