@@ -249,7 +249,17 @@ nnoremap <leader>= :wincmd =<cr>
 " go to the beginning of the line
 nmap 0 ^
 
-" Local config
-if filereadable($HOME . "/.vimrc.local")
-  source ~/.vimrc.local
-endif
+" Toggle highlighting until the next search
+set hlsearch!
+nnoremap <F3> :set hlsearch!<CR>
+
+" Make it obvious where 80 characters is
+set textwidth=80
+set colorcolumn=+1
+
+" Turn off splitting lines in vim (specially annoying in slim files)
+set formatoptions-=tc
+
+" Synchronize Vim's default register and the clipboard register;
+" allowing you to simply use `y` and `p`.
+set clipboard^=unnamed
