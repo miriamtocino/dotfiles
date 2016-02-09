@@ -44,5 +44,28 @@ alias vimrc="vim ~/.vimrc"
 alias vimrcbundles="vim ~/.vimrc.bundles"
 alias zshrc="vim ~/.zshrc"
 
-# Include custom aliases
-[[ -f ~/.aliases.local ]] && source ~/.aliases.local
+# Source zsh
+alias sourcezsh="source ~/.zshrc"
+
+# Projects
+alias p="cd ~/projects"
+alias dotfiles="cd ~/dotfiles"
+alias yoga="cd ~/projects/ror/yoga_on_rails"
+alias one="cd ~/projects/springest/one"
+
+# Rails
+alias rendered="tail -f log/development.log | grep Rendered"
+
+# Springest — ONE
+alias worker="bundle exec sidekiq -C config/sidekiq.yml -c ${WORKERS:-1}"
+alias es="elasticsearch"
+
+# Show/hide hidden files in Finder
+alias show="defaults write com.apple.finder AppleShowAllFiles -bool true && killall Finder"
+alias hide="defaults write com.apple.finder AppleShowAllFiles -bool false && killall Finder"
+
+# Recursively delete `.DS_Store` files
+alias cleanup="find . -type f -name '*.DS_Store' -ls -delete"
+
+# Create symlinks under home directory of new files in dotfiles
+alias symlinks="env RCRC=$HOME/dotfiles/rcrc rcup"
