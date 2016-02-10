@@ -1,1 +1,4 @@
 --ignore-dir=log/
+
+--type-set
+slim=.slim
