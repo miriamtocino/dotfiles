@@ -11,6 +11,7 @@ Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-fugitive'
 Bundle 'tpope/vim-projectionist'
+Bundle 'tpope/vim-dispatch'
 Bundle 'mustache/vim-mustache-handlebars'
 Bundle 'blarghmatey/split-expander'
 Bundle 'rking/ag.vim'
@@ -33,7 +34,6 @@ Bundle "skwp/greplace.vim"
 Bundle "vim-ruby/vim-ruby"
 Bundle "elixir-lang/vim-elixir"
 Bundle "scrooloose/syntastic"
-Bundle "tpope/vim-haml"
 Bundle "dkprice/vim-easygrep"
 Bundle "tpope/vim-rails"
 Bundle "altercation/vim-colors-solarized"
@@ -48,5 +48,6 @@ Bundle 'jsx/jsx.vim'
 Bundle 'terryma/vim-expand-region'
 Bundle 'slim-template/vim-slim'
 Bundle 'christoomey/vim-tmux-runner'
+Bundle 'jgdavey/vim-turbux'
 
 filetype on

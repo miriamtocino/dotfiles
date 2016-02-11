@@ -262,3 +262,9 @@ set formatoptions-=tc
 " synchronize Vim's default register and the clipboard register;
 " allowing you to simply use `y` and `p`.
 set clipboard^=unnamed
+
+" configure running tests from vim-turbux
+let g:no_turbux_mappings = 1
+map <leader>t <Plug>SendTestToTmux
+map <leader>s <Plug>SendFocusedTestToTmux
+let g:turbux_command_rspec = 'bundle exec spring rspec'
