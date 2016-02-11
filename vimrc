@@ -155,20 +155,20 @@ set encoding=utf-8
 " Highlight line number of where cursor currently is
 hi CursorLineNr guifg=#050505
 
-" Numbers
+" numbers
 set number
 set numberwidth=5
 
-" Snippets are activated by Shift+Tab
+" snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
 
-" Persistent undo
+" persistent undo
 set undodir=~/.vim/undo/
 set undofile
 set undolevels=1000
 set undoreload=10000
 
-" Tab completion
+" tab completion
 " will insert tab at beginning of line,
 " will use completion if not at beginning
 set wildmode=list:longest,list:full
@@ -183,26 +183,26 @@ function! InsertTabWrapper()
 endfunction
 inoremap <Tab> <c-r>=InsertTabWrapper()<cr>
 
-" Exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
+" exclude Javascript files in :Rtags via rails.vim due to warnings when parsing
 let g:Tlist_Ctags_Cmd="ctags --exclude='*.js'"
 
-" Switch between the last two files
+" switch between the last two files
 nnoremap <leader><leader> <c-^>
 
-" Get off my lawn
+" get off my lawn
 nnoremap <Left> :echoe "Use h"<CR>
 nnoremap <Right> :echoe "Use l"<CR>
 nnoremap <Up> :echoe "Use k"<CR>
 nnoremap <Down> :echoe "Use j"<CR>
 
-" Treat <li> and <p> tags like the block tags they are
+" treat <li> and <p> tags like the block tags they are
 let g:html_indent_tags = 'li\|p'
 
-" Open new split panes to right and bottom, which feels more natural
+" open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
 
-" Quicker window movement
+" quicker window movement
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
 nnoremap <C-h> <C-w>h
@@ -212,7 +212,7 @@ nnoremap <C-l> <C-w>l
 let g:syntastic_ruby_checkers = ['mri']
 let g:syntastic_enable_highlighting=0
 
-" Remove trailing whitespace on save for ruby files.
+" remove trailing whitespace on save for ruby files.
 function! s:RemoveTrailingWhitespaces()
   "Save last cursor position
   let l = line(".")
@@ -225,17 +225,16 @@ endfunction
 
 au BufWritePre * :call <SID>RemoveTrailingWhitespaces()
 
-" cmd n, cmd p for fwd/backward in search
-map <C-n> :cn<CR>
-map <C-p> :cp<CR>
+" cycling through your buffers
+:nnoremap <C-n> :bnext<CR>
 
-" Easy navigation between splits. Instead of ctrl-w + j. Just ctrl-j
+" easy navigation between splits. Instead of ctrl-w + j. Just ctrl-j
 nnoremap <C-J> <C-W><C-J>
 nnoremap <C-K> <C-W><C-K>
 nnoremap <C-L> <C-W><C-L>
 nnoremap <C-H> <C-W><C-H>
 
-" More natural split opening
+" more natural split opening
 set splitbelow
 set splitright
 
@@ -249,17 +248,17 @@ nnoremap <leader>= :wincmd =<cr>
 " go to the beginning of the line
 nmap 0 ^
 
-" Toggle highlighting until the next search
+" toggle highlighting until the next search
 set hlsearch!
 nnoremap <F3> :set hlsearch!<CR>
 
-" Make it obvious where 80 characters is
+" make it obvious where 80 characters is
 set textwidth=80
 set colorcolumn=+1
 
-" Turn off splitting lines in vim (specially annoying in slim files)
+" turn off splitting lines in vim (specially annoying in slim files)
 set formatoptions-=tc
 
-" Synchronize Vim's default register and the clipboard register;
+" synchronize Vim's default register and the clipboard register;
 " allowing you to simply use `y` and `p`.
 set clipboard^=unnamed
