@@ -18,12 +18,6 @@ map <Leader>gs :Gstatus<CR>
 map <Leader>gc :Gcommit<CR>
 map <Leader>gp :Gpush<CR>
 
-" vim-rspec mappings
-map <Leader>t :call RunCurrentSpecFile()<CR>
-map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
-map <Leader>a :call RunAllSpecs()<CR>
-
 " Toggle nerdtree with F10
 map <F10> :NERDTreeToggle<CR>
 " Current file in nerdtree
@@ -84,8 +78,8 @@ filetype plugin indent on
 augroup vimrcEx
   autocmd!
 
-  " For all text files set 'textwidth' to 78 characters.
-  autocmd FileType text setlocal textwidth=78
+  " For all text files set 'textwidth' to 80 characters.
+  autocmd FileType text setlocal textwidth=80
 
   " When editing a file, always jump to the last known cursor position.
   " Don't do it for commit messages, when the position is invalid, or when
@@ -96,7 +90,6 @@ augroup vimrcEx
     \ endif
 
   " Set syntax highlighting for specific file types
-  autocmd BufRead,BufNewFile Appraisals set filetype=ruby
   autocmd BufRead,BufNewFile *.md set filetype=markdown
 
   " Enable spellchecking for Markdown
@@ -120,19 +113,6 @@ let g:rspec_runner = "os_x_iterm"
 
 " Display extra whitespace
 set list listchars=tab:»·,trail:·
-
-" Use The Silver Searcher https://github.com/ggreer/the_silver_searcher
-if executable('ag')
-  " Use Ag over Grep
-  set grepprg=ag\ --nogroup
-  let g:grep_cmd_opts = '--line-numbers --noheading'
-
-  " Use ag in CtrlP for listing files. Lightning fast and respects .gitignore
-  let g:ctrlp_user_command = 'ag %s -l -g ""'
-
-  " ag is fast enough that CtrlP doesn't need to cache
-  let g:ctrlp_use_caching = 0
-endif
 
 " Airline
 let g:airline_powerline_fonts = 1
@@ -268,3 +248,6 @@ let g:no_turbux_mappings = 1
 map <leader>t <Plug>SendTestToTmux
 map <leader>s <Plug>SendFocusedTestToTmux
 let g:turbux_command_rspec = 'bundle exec spring rspec'
+
+" Command aliases for typoed commands (accidentally holding shift too long)
+command! W w
