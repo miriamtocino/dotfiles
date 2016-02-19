@@ -49,5 +49,6 @@ Bundle 'terryma/vim-expand-region'
 Bundle 'slim-template/vim-slim'
 Bundle 'christoomey/vim-tmux-runner'
 Bundle 'jgdavey/vim-turbux'
+Bundle 'tpope/vim-commentary'
 
 filetype on
