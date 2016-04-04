@@ -95,8 +95,8 @@ augroup vimrcEx
   " Enable spellchecking for Markdown
   autocmd FileType markdown setlocal spell
 
-  " Automatically wrap at 80 characters for Markdown
-  autocmd BufRead,BufNewFile *.md setlocal textwidth=80
+  " Automatically wrap at 72 characters for Markdown
+  autocmd BufRead,BufNewFile *.md setlocal textwidth=72
 augroup END
 
 " bind K to search word under cursor
