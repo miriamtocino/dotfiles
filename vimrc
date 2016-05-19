@@ -120,7 +120,7 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
-let g:airline_theme='solarized'
+let g:airline_theme='powerlineish'
 set t_Co=256
 
 :set smartcase
