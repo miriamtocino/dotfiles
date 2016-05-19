@@ -51,7 +51,10 @@ alias sourcezsh="source ~/.zshrc"
 alias p="cd ~/projects"
 alias dotfiles="cd ~/dotfiles"
 alias yoga="cd ~/projects/ror/yoga_on_rails"
-alias one="cd ~/projects/springest/one"
+alias one="cd ~/Documents/Professional/Springest/one"
+alias codaisseur="cd ~/Documents/Professional/Codaisseur"
+alias elearning="cd ~/Documents/Professional/Elearning"
+alias upcase="cd ~/Documents/Professional/Elearning/upcase"
 
 # Rails
 alias rendered="tail -f log/development.log | grep Rendered"
