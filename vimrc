@@ -120,7 +120,8 @@ if !exists('g:airline_symbols')
     let g:airline_symbols = {}
 endif
 let g:airline_symbols.space = "\ua0"
-let g:airline_theme='powerlineish'
+" let g:airline_theme='powerlineish'
+let g:airline_theme = 'tomorrow'
 set t_Co=256
 
 :set smartcase
@@ -128,7 +129,9 @@ set t_Co=256
 :set noantialias
 
 " Color scheme
-colorscheme solarized
+"colorscheme solarized
+" colorscheme tomorrow-night
+colorscheme tomorrow
 set background=light
 set encoding=utf-8
 

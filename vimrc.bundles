@@ -50,5 +50,8 @@ Bundle 'slim-template/vim-slim'
 Bundle 'christoomey/vim-tmux-runner'
 Bundle 'jgdavey/vim-turbux'
 Bundle 'tpope/vim-commentary'
+Bundle 'mxw/vim-jsx'
+Bundle 'zerowidth/vim-copy-as-rtf'
+Bundle 'flazz/vim-colorschemes'
 
 filetype on

@@ -48,13 +48,14 @@ alias zshrc="vim ~/.zshrc"
 alias sourcezsh="source ~/.zshrc"
 
 # Projects
-alias p="cd ~/projects"
+alias p="cd ~/Documents/Professional/projects"
 alias dotfiles="cd ~/dotfiles"
-alias yoga="cd ~/projects/ror/yoga_on_rails"
-alias one="cd ~/Documents/Professional/Springest/one"
-alias codaisseur="cd ~/Documents/Professional/Codaisseur"
-alias elearning="cd ~/Documents/Professional/Elearning"
-alias upcase="cd ~/Documents/Professional/Elearning/upcase"
+alias yoga="cd ~/Documents/Professional/projects/ror/yoga_on_rails"
+alias one="cd ~/Documents/Professional/springest/one"
+alias cod="cd ~/Documents/Professional/Codaisseur"
+alias learning="cd ~/Documents/Professional/learning"
+alias upcase="cd ~/Documents/Professional/learning/upcase"
+alias mackenzie="cd ~/Documents/Professional/learning/mackenzie"
 
 # Rails
 alias rendered="tail -f log/development.log | grep Rendered"

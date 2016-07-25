@@ -2,3 +2,8 @@
 
 --type-set
 slim=.slim
+--type-add
+html=.haml
+--type-add
+css=.sass,.scss
+
