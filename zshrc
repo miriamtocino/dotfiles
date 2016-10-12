@@ -86,3 +86,6 @@ source $ZSH/oh-my-zsh.sh
 
 # aliases
 [[ -f ~/.aliases ]] && source ~/.aliases
+
+# environment variables
+[[ -f ~/.zshrc_local ]] && source ~/.zshrc_local

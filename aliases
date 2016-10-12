@@ -47,15 +47,15 @@ alias zshrc="vim ~/.zshrc"
 # Source zsh
 alias sourcezsh="source ~/.zshrc"
 
+# Clear terminal tab
+alias cl="clear"
+
 # Projects
-alias p="cd ~/Documents/Professional/projects"
+alias c="cd ~/Documents/Code"
 alias dotfiles="cd ~/dotfiles"
-alias yoga="cd ~/Documents/Professional/projects/ror/yoga_on_rails"
-alias one="cd ~/Documents/Professional/springest/one"
+alias one="cd ~/Documents/Professional/Springest/one"
 alias cod="cd ~/Documents/Professional/Codaisseur"
-alias learning="cd ~/Documents/Professional/learning"
-alias upcase="cd ~/Documents/Professional/learning/upcase"
-alias mackenzie="cd ~/Documents/Professional/learning/mackenzie"
+alias el="cd ~/Documents/Professional/Elearning"
 
 # Rails
 alias rendered="tail -f log/development.log | grep Rendered"
